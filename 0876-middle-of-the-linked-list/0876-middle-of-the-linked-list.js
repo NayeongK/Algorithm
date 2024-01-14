@@ -9,22 +9,14 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-
 const middleNode = function(head) {
-  let length = 0;
-  let current = head;
+  let slow = head;
+  let fast = head;
 
-  while (current !== null) {
-      length++;
-      current = current.next;
+  while (fast && fast.next) {
+    slow = slow.next;
+    fast = fast.next.next;
   }
 
-  const mid = Math.floor(length / 2);
-  current = head;
-
-  for (let i = 0; i < mid; i++) {
-      current = current.next;
-  }
-
-  return current;
+  return slow;
 };
