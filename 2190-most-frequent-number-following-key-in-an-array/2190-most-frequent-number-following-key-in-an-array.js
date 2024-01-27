@@ -6,7 +6,7 @@
 const mostFrequent = function(nums, key) {
   const count = {};
   let maxCount = 0;
-  let result;
+  let result = null;
 
   for (let i = 0; i < nums.length - 1; i++) {
     if (nums[i] === key) {
