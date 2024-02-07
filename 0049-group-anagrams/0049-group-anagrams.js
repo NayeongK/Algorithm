@@ -4,8 +4,8 @@
  */
 const groupAnagrams = function(strs) {
   const obj = {};
-  
   let sortedStr = null;
+
   for (let i = 0; i< strs.length; i++) {
     sortedStr = strs[i].split("").sort().join();
     if (!obj[sortedStr]) {
